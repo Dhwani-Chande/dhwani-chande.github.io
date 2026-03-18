@@ -1727,8 +1727,8 @@
         description: "Fine-tuned small language models on a curated 40K-pair dataset to translate natural language into executable Bash commands. Built a complete fine-tuning pipeline, a custom 8-metric evaluation framework, and deployed the model as a live FastAPI service on HuggingFace Spaces with GitHub Actions CI.",
         metrics: [{ value: "+25pt", label: "Accuracy Gain" }, { value: "40K+", label: "Command Pairs" }, { value: "5x", label: "Semantic vs Exact Match" }, { value: "100%", label: "Pytest Pass Rate" }],
         github: "https://github.com/Dhwani-Chande/Natural-Language-to-Bash-Translation-using-LLMs",
-        live: null,
-        bullets: ["Fine-tuned Llama-3.2-1B and Qwen2.5-Coder-0.5B on 40,639 NL-to-Bash command pairs, achieving a 25-point accuracy gain", "Benchmarked 8 evaluation metrics (BLEU, TF-IDF, Cosine Similarity), proving semantic methods outperform exact-match by 5x", "Deployed a FastAPI REST service with Pydantic validation, latency middleware, and a 20-test pytest suite (100% pass rate)", "Configured GitHub Actions CI to run the full test suite on every push; live model running on HuggingFace Spaces"]
+        live: "https://huggingface.co/dhwanichande29/nl-to-bash",
+        bullets:["Fine-tuned Llama-3.2-1B and Qwen2.5-Coder-0.5B on 40,639 command pairs, achieving a 25-point accuracy gain over baseline; model published on Hugging Face and live in production.","Built and deployed a REST API on Hugging Face Spaces using FastAPI and Docker, supporting single and batch translation (up to 10 commands), with per-query confidence scores and latency tracking at 1.5s/query.","Designed an evaluation framework across 8 metrics (BLEU, TF-IDF, Cosine Similarity), showing semantic methods outperform exact-match by 5x - a finding with direct implications for code generation benchmarking.","Set up GitHub Actions CI to run a 20-test pytest suite on every push, keeping the production API at 100% test pass rate across all deployments."]
       },
       {
         id: 2, title: "3D Gaussian Splatting: Real-Time Rendering & Scene Editing", emoji: "🔬", wip: true,
