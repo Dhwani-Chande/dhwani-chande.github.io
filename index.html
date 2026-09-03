@@ -14,6 +14,34 @@
         content="Dhwani Chande — AI/ML Engineer building, evaluating, and deploying machine learning systems."
     >
 
+    <!-- Favicon -->
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Open Graph -->
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Dhwani Chande — AI/ML Engineer">
+    <meta
+        property="og:description"
+        content="AI/ML Engineer building, evaluating, and deploying machine learning systems — LLMs, computer vision, ML systems, and data-driven research."
+    >
+    <meta property="og:url" content="https://dhwani-chande.github.io/">
+    <meta property="og:site_name" content="Dhwani Chande">
+
+    <!-- Twitter Card -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Dhwani Chande — AI/ML Engineer">
+    <meta
+        name="twitter:description"
+        content="AI/ML Engineer building, evaluating, and deploying machine learning systems — LLMs, computer vision, ML systems, and data-driven research."
+    >
+
+    <link rel="canonical" href="https://dhwani-chande.github.io/">
+
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,7 +67,7 @@
             DC<span>.</span>
         </a>
 
-        <nav class="nav-links">
+        <nav class="nav-links" id="navLinks">
 
             <a href="#work">Work</a>
             <a href="#research">Research</a>
@@ -60,6 +88,8 @@
             class="mobile-menu"
             id="mobileMenu"
             aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="navLinks"
         >
             ☰
         </button>
@@ -398,10 +428,24 @@
                 <div class="project-links">
 
                     <a
-                        href="https://github.com/"
+                        href="https://github.com/Dhwani-Chande/Natural-Language-to-Bash-Translation-using-LLMs"
                         target="_blank"
                     >
                         GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://huggingface.co/dhwanichande29/nl-to-bash"
+                        target="_blank"
+                    >
+                        Model ↗
+                    </a>
+
+                    <a
+                        href="https://huggingface.co/spaces/dhwanichande29/nl-to-bash"
+                        target="_blank"
+                    >
+                        Demo ↗
                     </a>
 
                 </div>
@@ -467,13 +511,8 @@
                 </div>
 
                 <div>
-                    <strong>90%</strong>
-                    <span>functional accuracy</span>
-                </div>
-
-                <div>
-                    <strong>0.89</strong>
-                    <span>F1 score</span>
+                    <strong>13.67%</strong>
+                    <span>exact match</span>
                 </div>
 
                 <div>
@@ -481,7 +520,29 @@
                     <span>semantic match</span>
                 </div>
 
+                <div>
+                    <strong>0.776</strong>
+                    <span>avg cosine similarity</span>
+                </div>
+
             </div>
+
+            <p class="project-description">
+                Exact string match undercounts correct commands — two
+                different Bash commands can do the same thing. To measure
+                this properly, I compared eight functional-equivalence
+                heuristics across 600 hand-labeled command pairs. The best
+                approach, execution-assisted embedding evaluation, reached
+                <strong>90% accuracy</strong> and a <strong>0.89 F1</strong>
+                score.
+            </p>
+
+            <p class="project-description">
+                The engineering layer wraps the models in a FastAPI service
+                with single and batch (max 10) translation endpoints, health
+                monitoring, latency logging, a 20-test pytest suite, and CI
+                that runs on every push and pull request.
+            </p>
 
 
             <div class="tech-list">
@@ -532,7 +593,7 @@
 
 
                 <a
-                    href="https://github.com/"
+                    href="https://github.com/Dhwani-Chande/3D-Gaussian-Splatting-Real-Time-Rendering"
                     target="_blank"
                     class="project-external"
                 >
@@ -547,6 +608,90 @@
                 standard 3D Gaussian Splatting with Mip-Splatting for
                 scale-aware novel view synthesis.
             </p>
+
+
+            <!-- Pipeline -->
+
+            <div class="architecture">
+
+                <div class="architecture-node">
+                    <small>CAPTURE</small>
+                    <strong>
+                        iPhone video
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <small>STRUCTURE FROM MOTION</small>
+                    <strong>
+                        COLMAP poses
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node active">
+                    <small>RENDER</small>
+                    <strong>
+                        3D Gaussian Splatting
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <small>REFINE</small>
+                    <strong>
+                        Mip-Splatting
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <!-- Before / after render comparison -->
+
+            <div class="compare-slider" data-compare>
+
+                <div class="compare-images">
+
+                    <img
+                        src="assets/3dgs/3dgs-baseline-result.png"
+                        alt="Novel view rendered by the standard 3D Gaussian Splatting baseline, showing aliasing artifacts"
+                        class="compare-img compare-before"
+                        loading="lazy"
+                    >
+
+                    <img
+                        src="assets/3dgs/mip-splatting-result.png"
+                        alt="Same novel view rendered by Mip-Splatting, showing reduced aliasing and sharper edges"
+                        class="compare-img compare-after"
+                        loading="lazy"
+                    >
+
+                </div>
+
+                <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="compare-range"
+                    aria-label="Drag to compare the 3D Gaussian Splatting baseline render against the Mip-Splatting render"
+                >
+
+                <div class="compare-labels">
+                    <span>3DGS Baseline</span>
+                    <span>Mip-Splatting</span>
+                </div>
+
+            </div>
+
+            <div class="pipeline-callout">
+                64% reduction in perceptual error (LPIPS)
+            </div>
 
 
             <div class="model-comparison">
@@ -688,20 +833,43 @@
                 </div>
 
 
-                <a
-                    href="#"
-                    class="project-external"
-                >
-                    Dashboard ↗
-                </a>
+                <div class="project-links">
+
+                    <a
+                        href="https://github.com/Dhwani-Chande/Geospatial-Analysis-of-Urban-Food-Deserts"
+                        target="_blank"
+                    >
+                        GitHub ↗
+                    </a>
+
+                    <a
+                        href="https://dhwani-chande.github.io/Geospatial-Analysis-of-Urban-Food-Deserts/"
+                        target="_blank"
+                    >
+                        Dashboard ↗
+                    </a>
+
+                </div>
 
             </div>
 
 
             <p class="project-description">
-                Analyzed 1,314 Cook County census tracts by integrating
-                USDA food-access data with demographic, income,
-                broadband, SNAP and transportation data.
+                Analyzed 1,314 Cook County census tracts, integrating USDA
+                food-access data with demographic, income, broadband, SNAP,
+                and transportation signals across 12 affordability and
+                demographic features — including a custom Digital Barrier
+                Index for broadband access.
+            </p>
+
+            <p class="project-description">
+                Only 3.9% of tracts are labeled food deserts. I benchmarked
+                logistic regression, random forest, gradient boosting, SVM,
+                and naive Bayes, applying SMOTE to the training split only
+                to avoid leakage. A balanced logistic regression model
+                raised recall from 0% to 73% (0.804 ROC-AUC, 66.7% recall
+                on its own), and the best model reached 0.825 ROC-AUC on
+                the held-out test set (0.838 ± 0.026 across cross-validation).
             </p>
 
 
@@ -731,10 +899,10 @@
 
                 <div>
 
-                    <strong>0.838</strong>
+                    <strong>0.825</strong>
 
                     <span>
-                        mean ROC-AUC
+                        test-set ROC-AUC
                     </span>
 
                 </div>
@@ -788,10 +956,11 @@
 
 
                 <a
-                    href="#research"
+                    href="https://github.com/Archit1706/FairLend-Miners"
+                    target="_blank"
                     class="project-external"
                 >
-                    Research ↗
+                    GitHub ↗
                 </a>
 
             </div>
@@ -800,7 +969,15 @@
             <p class="project-description">
                 Audited mortgage-lending patterns across 103,481 HMDA
                 2023 applications using association-rule mining and
-                fairness-aware binning.
+                fairness-aware binning: standard binning surfaced 819
+                frequent itemsets and 2,214 rules, while fairness-aware
+                binning surfaced 854 itemsets and 2,454 rules. The
+                strongest signal was high debt-to-income ratio (10.7%
+                support, 67.2% confidence, 2.81 lift). No explicit
+                demographic denial rules appeared above the 10% support
+                threshold, so I followed up with clustering and
+                cluster-level disparate-impact analysis to surface
+                disparities the global rules missed.
             </p>
 
 
@@ -888,8 +1065,9 @@
 
 
         <a
-            href="#"
+            href="https://arxiv.org/abs/2606.12435"
             class="research-item"
+            target="_blank"
         >
 
             <div>
@@ -918,8 +1096,9 @@
 
 
         <a
-            href="#"
+            href="https://bpasjournals.com/library-science/index.php/journal/article/view/2693/1888"
             class="research-item"
+            target="_blank"
         >
 
             <div>
@@ -949,8 +1128,9 @@
 
 
         <a
-            href="#"
+            href="https://journal.esrgroups.org/jes/article/view/6776"
             class="research-item"
+            target="_blank"
         >
 
             <div>
@@ -1197,7 +1377,7 @@
             </a>
 
             <a
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/dhwani-chande29/"
                 target="_blank"
             >
                 LinkedIn
