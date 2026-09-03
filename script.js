@@ -1,40 +1,130 @@
-const menuButton = document.getElementById("menuButton");
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
 
+const mobileMenu = document.getElementById("mobileMenu");
 const navLinks = document.querySelector(".nav-links");
 
-menuButton.addEventListener("click", () => {
+if (mobileMenu) {
 
-    const isOpen = navLinks.style.display === "flex";
+    mobileMenu.addEventListener("click", () => {
 
-    navLinks.style.display = isOpen ? "none" : "flex";
+        navLinks.classList.toggle("open");
 
-    if (!isOpen) {
+    });
 
-        navLinks.style.position = "absolute";
-        navLinks.style.top = "72px";
-        navLinks.style.left = "0";
-        navLinks.style.right = "0";
+}
 
-        navLinks.style.background = "#f6f6f2";
 
-        navLinks.style.padding = "25px";
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-        navLinks.style.flexDirection = "column";
+    link.addEventListener("click", () => {
 
-        navLinks.style.borderBottom = "1px solid #deded8";
-    }
+        navLinks.classList.remove("open");
+
+    });
 
 });
 
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+/* =====================================================
+   PROJECT NODE NAVIGATION
+===================================================== */
 
-    link.addEventListener("click", () => {
+const nodes =
+    document.querySelectorAll(".system-node");
 
-        if (window.innerWidth <= 800) {
-            navLinks.style.display = "none";
-        }
+
+nodes.forEach(node => {
+
+    node.addEventListener("click", () => {
+
+        const targetId =
+            node.dataset.target;
+
+        const target =
+            document.getElementById(targetId);
+
+        if (!target) return;
+
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+
+        target.classList.add("highlight");
+
+
+        setTimeout(() => {
+
+            target.classList.remove("highlight");
+
+        }, 1800);
 
     });
+
+});
+
+
+/* =====================================================
+   SCROLL REVEAL
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".project, .research-item, .tool-group, .pipeline-item"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add(
+                        "visible"
+                    );
+
+                    observer.unobserve(
+                        entry.target
+                    );
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.08
+        }
+    );
+
+
+revealElements.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+const yearElements =
+    document.querySelectorAll(
+        "[data-current-year]"
+    );
+
+
+yearElements.forEach(element => {
+
+    element.textContent =
+        new Date().getFullYear();
 
 });
