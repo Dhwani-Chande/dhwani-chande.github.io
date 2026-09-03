@@ -9,7 +9,13 @@ if (mobileMenu) {
 
     mobileMenu.addEventListener("click", () => {
 
-        navLinks.classList.toggle("open");
+        const isOpen =
+            navLinks.classList.toggle("open");
+
+        mobileMenu.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
 
     });
 
@@ -108,6 +114,40 @@ const observer =
 revealElements.forEach(element => {
 
     observer.observe(element);
+
+});
+
+
+/* =====================================================
+   IMAGE COMPARISON SLIDER
+===================================================== */
+
+const compareWidgets =
+    document.querySelectorAll("[data-compare]");
+
+
+compareWidgets.forEach(widget => {
+
+    const range =
+        widget.querySelector(".compare-range");
+
+    const after =
+        widget.querySelector(".compare-after");
+
+    if (!range || !after) return;
+
+
+    const update = () => {
+
+        after.style.clipPath =
+            `inset(0 ${100 - range.value}% 0 0)`;
+
+    };
+
+
+    range.addEventListener("input", update);
+
+    update();
 
 });
 
