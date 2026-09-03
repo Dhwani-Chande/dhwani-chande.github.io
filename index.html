@@ -2,70 +2,178 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Dhwani Chande | AI/ML Engineer</title>
+    <title>Dhwani Chande — AI/ML Engineer</title>
+
     <meta
         name="description"
         content="Dhwani Chande — AI/ML Engineer building, evaluating, and deploying machine learning systems."
     >
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
-<nav class="navbar">
-    <div class="nav-container">
+<header class="navbar">
 
-        <a href="#" class="logo">DC<span>.</span></a>
+    <div class="nav-inner">
 
-        <div class="nav-links">
+        <a href="#top" class="logo">
+            DC<span>.</span>
+        </a>
+
+        <nav class="nav-links">
+
             <a href="#work">Work</a>
             <a href="#research">Research</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
-        </div>
 
-        <button class="menu-button" id="menuButton">
+            <a
+                href="Dhwani_Auvnish_Chande_Resume.pdf"
+                target="_blank"
+                class="nav-resume"
+            >
+                Resume ↗
+            </a>
+
+        </nav>
+
+        <button
+            class="mobile-menu"
+            id="mobileMenu"
+            aria-label="Open menu"
+        >
             ☰
         </button>
 
     </div>
-</nav>
+
+</header>
 
 
-<!-- ================= HERO ================= -->
+<main id="top">
+
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="hero">
 
-    <div class="hero-content">
+    <div class="hero-grid">
 
-        <p class="eyebrow">
-            AI / ML ENGINEER · CHICAGO
-        </p>
+        <div class="hero-main">
 
-        <h1>
-            I build, evaluate,<br>
-            and deploy <span>ML systems.</span>
-        </h1>
+            <div class="eyebrow">
+                AI / ML ENGINEER · CHICAGO
+            </div>
 
-        <p class="hero-description">
-            I'm Dhwani Chande, an MS Computer Science student at UIC
-            focused on LLMs, computer vision, machine learning systems,
-            and measurable model performance.
-        </p>
+            <h1>
+                I build systems
+                <span>that learn.</span>
+            </h1>
 
-        <div class="hero-buttons">
-            <a href="#work" class="button primary">
-                Explore my work →
-            </a>
+            <h2>
+                Then I make them measurable.
+            </h2>
 
-            <a href="assets/resume.pdf" class="button secondary" target="_blank">
-                Resume ↗
-            </a>
+            <p class="hero-copy">
+                I'm Dhwani Chande, an MS Computer Science student at UIC
+                focused on LLM engineering, computer vision, machine learning
+                systems, and data-driven research.
+            </p>
+
+            <div class="hero-actions">
+
+                <a href="#work" class="button button-dark">
+                    Explore my work
+                    <span>↓</span>
+                </a>
+
+                <a
+                    href="Dhwani_Auvnish_Chande_Resume.pdf"
+                    target="_blank"
+                    class="button button-light"
+                >
+                    View resume
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Interactive system visual -->
+
+        <div class="hero-system">
+
+            <div class="system-label">
+                ML SYSTEM / 001
+            </div>
+
+            <div class="system-orbit">
+
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+
+                <div class="system-core">
+                    <span>DC</span>
+                </div>
+
+                <button
+                    class="system-node node-llm"
+                    data-target="project-bash"
+                >
+                    LLM
+                </button>
+
+                <button
+                    class="system-node node-cv"
+                    data-target="project-3d"
+                >
+                    CV
+                </button>
+
+                <button
+                    class="system-node node-data"
+                    data-target="project-food"
+                >
+                    DATA
+                </button>
+
+                <button
+                    class="system-node node-ai"
+                    data-target="project-fairlend"
+                >
+                    AI
+                </button>
+
+            </div>
+
+            <div class="system-caption">
+                <span></span>
+                CLICK A NODE TO EXPLORE
+            </div>
+
         </div>
 
     </div>
@@ -73,30 +181,55 @@
 </section>
 
 
-<!-- ================= PROOF ================= -->
+<!-- =====================================================
+     PROOF / METRICS
+===================================================== -->
 
 <section class="proof">
 
-    <div class="proof-grid">
+    <div class="proof-inner">
 
         <div class="proof-item">
+
             <strong>40,639</strong>
-            <span>LLM training pairs</span>
+
+            <span>
+                NL → Bash training pairs
+            </span>
+
         </div>
 
+
         <div class="proof-item">
+
             <strong>90%</strong>
-            <span>functional-equivalence accuracy</span>
+
+            <span>
+                functional-equivalence accuracy
+            </span>
+
         </div>
 
+
         <div class="proof-item">
+
             <strong>28.09 dB</strong>
-            <span>best PSNR achieved</span>
+
+            <span>
+                Mip-Splatting PSNR
+            </span>
+
         </div>
 
+
         <div class="proof-item">
+
             <strong>103K+</strong>
-            <span>mortgage applications analyzed</span>
+
+            <span>
+                mortgage applications
+            </span>
+
         </div>
 
     </div>
@@ -104,60 +237,102 @@
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================================
+     PHILOSOPHY
+===================================================== -->
 
-<section class="intro section">
+<section class="section philosophy">
 
-    <div class="section-label">
+    <div class="section-index">
         01 / APPROACH
     </div>
 
-    <div class="intro-content">
+
+    <div class="philosophy-grid">
 
         <h2>
-            I don't stop at<br>
-            training the model.
+            I don't stop<br>
+            at the model.
         </h2>
 
-        <p>
-            My projects span the full ML lifecycle — from data preparation
-            and model training to evaluation, API development, testing,
-            containerization, and reproducible experimentation.
-        </p>
+
+        <div class="philosophy-text">
+
+            <p>
+                A model is only one part of a useful ML system.
+            </p>
+
+            <p>
+                I care about the entire path from data to deployment:
+                reproducible experiments, meaningful evaluation,
+                APIs, testing, containerization, and measurable results.
+            </p>
+
+        </div>
 
     </div>
 
 
     <div class="pipeline">
 
-        <div class="pipeline-step">
+        <div class="pipeline-item">
+
             <span>01</span>
-            <h3>Data</h3>
-            <p>Build datasets and preprocessing pipelines.</p>
+
+            <h3>DATA</h3>
+
+            <p>
+                Curate datasets and build preprocessing pipelines.
+            </p>
+
         </div>
+
 
         <div class="pipeline-arrow">→</div>
 
-        <div class="pipeline-step">
+
+        <div class="pipeline-item">
+
             <span>02</span>
-            <h3>Model</h3>
-            <p>Train, fine-tune and benchmark models.</p>
+
+            <h3>MODEL</h3>
+
+            <p>
+                Train, fine-tune and benchmark models.
+            </p>
+
         </div>
+
 
         <div class="pipeline-arrow">→</div>
 
-        <div class="pipeline-step">
+
+        <div class="pipeline-item">
+
             <span>03</span>
-            <h3>Evaluate</h3>
-            <p>Measure performance with meaningful metrics.</p>
+
+            <h3>EVALUATE</h3>
+
+            <p>
+                Design metrics that measure what actually matters.
+            </p>
+
         </div>
+
 
         <div class="pipeline-arrow">→</div>
 
-        <div class="pipeline-step">
+
+        <div class="pipeline-item">
+
             <span>04</span>
-            <h3>Engineer</h3>
-            <p>Build APIs, tests, containers and CI.</p>
+
+            <h3>SHIP</h3>
+
+            <p>
+                Build APIs, tests, containers and CI pipelines.
+            </p>
+
         </div>
 
     </div>
@@ -165,80 +340,126 @@
 </section>
 
 
-<!-- ================= WORK ================= -->
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
 
 <section id="work" class="section work">
 
-    <div class="section-label">
+    <div class="section-index">
         02 / SELECTED WORK
     </div>
 
-    <div class="section-heading">
-        <h2>Systems I've built.</h2>
+
+    <div class="section-title-row">
+
+        <h2>
+            Systems I've built.
+        </h2>
 
         <p>
-            A mix of language models, computer vision, geospatial ML,
-            and responsible AI research.
+            LLMs, computer vision, geospatial ML,
+            data mining and responsible AI.
         </p>
+
     </div>
 
 
-    <!-- PROJECT 1 -->
+    <!-- ================= PROJECT 01 ================= -->
 
-    <article class="project featured">
+    <article
+        class="project project-featured"
+        id="project-bash"
+    >
 
         <div class="project-number">
             01
         </div>
 
-        <div class="project-content">
 
-            <div class="project-top">
+        <div class="project-body">
+
+            <div class="project-heading">
 
                 <div>
 
-                    <p class="project-category">
-                        LLM · EVALUATION · ML SYSTEMS
-                    </p>
+                    <div class="project-type">
+                        LLM · FINE-TUNING · EVALUATION · API
+                    </div>
 
                     <h3>
-                        Natural Language → Bash
+                        Natural Language
+                        <span>→ Bash</span>
                     </h3>
 
                 </div>
 
-                <a
-                    href="#"
-                    class="project-link"
-                    target="_blank"
-                >
-                    GitHub ↗
-                </a>
+
+                <div class="project-links">
+
+                    <a
+                        href="https://github.com/"
+                        target="_blank"
+                    >
+                        GitHub ↗
+                    </a>
+
+                </div>
 
             </div>
 
 
             <p class="project-description">
-                Fine-tuned compact language models to translate natural
-                language instructions into executable Bash commands,
-                then built an evaluation and inference system around them.
+                Fine-tuned Llama-3.2-1B-Instruct and Qwen2.5-Coder-0.5B-Instruct
+                on 40,639 natural-language-to-Bash command pairs, then built
+                an evaluation and production inference layer around the models.
             </p>
 
 
+            <!-- Architecture -->
+
             <div class="architecture">
 
-                <div>User instruction</div>
-                <span>→</span>
-                <div>Fine-tuned LLM</div>
-                <span>→</span>
-                <div>Bash command</div>
-                <span>→</span>
-                <div>Evaluation</div>
+                <div class="architecture-node">
+                    <small>INPUT</small>
+                    <strong>
+                        Natural language
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node active">
+                    <small>MODEL</small>
+                    <strong>
+                        Fine-tuned LLM
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <small>OUTPUT</small>
+                    <strong>
+                        Bash command
+                    </strong>
+                </div>
+
+                <div class="architecture-arrow">→</div>
+
+                <div class="architecture-node">
+                    <small>TEST</small>
+                    <strong>
+                        Functional evaluation
+                    </strong>
+                </div>
 
             </div>
 
 
-            <div class="metrics">
+            <!-- Metrics -->
+
+            <div class="project-metrics">
 
                 <div>
                     <strong>40,639</strong>
@@ -247,12 +468,12 @@
 
                 <div>
                     <strong>90%</strong>
-                    <span>accuracy</span>
+                    <span>functional accuracy</span>
                 </div>
 
                 <div>
                     <strong>0.89</strong>
-                    <span>F1</span>
+                    <span>F1 score</span>
                 </div>
 
                 <div>
@@ -263,13 +484,16 @@
             </div>
 
 
-            <div class="tags">
+            <div class="tech-list">
+
                 <span>PyTorch</span>
                 <span>Hugging Face</span>
                 <span>FastAPI</span>
+                <span>Pydantic</span>
                 <span>Docker</span>
                 <span>pytest</span>
                 <span>GitHub Actions</span>
+
             </div>
 
         </div>
@@ -277,31 +501,41 @@
     </article>
 
 
-    <!-- PROJECT 2 -->
+    <!-- ================= PROJECT 02 ================= -->
 
-    <article class="project">
+    <article
+        class="project"
+        id="project-3d"
+    >
 
         <div class="project-number">
             02
         </div>
 
-        <div class="project-content">
 
-            <div class="project-top">
+        <div class="project-body">
+
+            <div class="project-heading">
 
                 <div>
 
-                    <p class="project-category">
-                        COMPUTER VISION · 3D
-                    </p>
+                    <div class="project-type">
+                        COMPUTER VISION · 3D · RENDERING
+                    </div>
 
                     <h3>
-                        3D Gaussian Splatting
+                        3D Gaussian
+                        <span>Splatting</span>
                     </h3>
 
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="project-external"
+                >
                     GitHub ↗
                 </a>
 
@@ -309,55 +543,114 @@
 
 
             <p class="project-description">
-                Built an end-to-end pipeline for novel view synthesis,
-                comparing standard 3D Gaussian Splatting with
-                scale-aware Mip-Splatting.
+                Built an end-to-end experimentation pipeline comparing
+                standard 3D Gaussian Splatting with Mip-Splatting for
+                scale-aware novel view synthesis.
             </p>
 
 
-            <div class="comparison">
+            <div class="model-comparison">
 
-                <div class="comparison-item">
-                    <span>PSNR</span>
-
-                    <div class="bar">
-                        <div class="bar-fill" style="width: 75%"></div>
-                    </div>
-
-                    <strong>21.13 → 28.09 dB</strong>
+                <div class="comparison-label">
+                    MODEL PERFORMANCE
                 </div>
 
 
-                <div class="comparison-item">
-                    <span>SSIM</span>
+                <div class="comparison-row">
 
-                    <div class="bar">
-                        <div class="bar-fill" style="width: 90%"></div>
+                    <div class="comparison-name">
+                        PSNR
                     </div>
 
-                    <strong>0.702 → 0.896</strong>
+                    <div class="comparison-values">
+
+                        <span>
+                            21.13
+                        </span>
+
+                        <div class="comparison-line">
+                            <div
+                                class="comparison-progress"
+                                style="width: 70%"
+                            ></div>
+                        </div>
+
+                        <strong>
+                            28.09 dB
+                        </strong>
+
+                    </div>
+
                 </div>
 
 
-                <div class="comparison-item">
-                    <span>LPIPS</span>
+                <div class="comparison-row">
 
-                    <div class="bar">
-                        <div class="bar-fill" style="width: 36%"></div>
+                    <div class="comparison-name">
+                        SSIM
                     </div>
 
-                    <strong>0.244 → 0.088</strong>
+                    <div class="comparison-values">
+
+                        <span>
+                            .702
+                        </span>
+
+                        <div class="comparison-line">
+                            <div
+                                class="comparison-progress"
+                                style="width: 82%"
+                            ></div>
+                        </div>
+
+                        <strong>
+                            .896
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <div class="comparison-name">
+                        LPIPS
+                    </div>
+
+                    <div class="comparison-values">
+
+                        <span>
+                            .244
+                        </span>
+
+                        <div class="comparison-line">
+                            <div
+                                class="comparison-progress"
+                                style="width: 36%"
+                            ></div>
+                        </div>
+
+                        <strong>
+                            .088
+                        </strong>
+
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <div class="tags">
+            <div class="tech-list">
+
                 <span>PyTorch</span>
+                <span>3DGS</span>
+                <span>Mip-Splatting</span>
                 <span>COLMAP</span>
                 <span>OpenCV</span>
-                <span>Mip-Splatting</span>
                 <span>ffmpeg</span>
+
             </div>
 
         </div>
@@ -365,31 +658,40 @@
     </article>
 
 
-    <!-- PROJECT 3 -->
+    <!-- ================= PROJECT 03 ================= -->
 
-    <article class="project">
+    <article
+        class="project project-split"
+        id="project-food"
+    >
 
         <div class="project-number">
             03
         </div>
 
-        <div class="project-content">
 
-            <div class="project-top">
+        <div class="project-body">
+
+            <div class="project-heading">
 
                 <div>
 
-                    <p class="project-category">
+                    <div class="project-type">
                         GEOSPATIAL ML · DATA SCIENCE
-                    </p>
+                    </div>
 
                     <h3>
-                        Urban Food Desert Analysis
+                        Urban Food
+                        <span>Deserts</span>
                     </h3>
 
                 </div>
 
-                <a href="#" class="project-link">
+
+                <a
+                    href="#"
+                    class="project-external"
+                >
                     Dashboard ↗
                 </a>
 
@@ -397,38 +699,58 @@
 
 
             <p class="project-description">
-                Analyzed 1,314 Cook County census tracts using food-access,
-                demographic, income, broadband, transportation and SNAP data
-                to study food-desert risk.
+                Analyzed 1,314 Cook County census tracts by integrating
+                USDA food-access data with demographic, income,
+                broadband, SNAP and transportation data.
             </p>
 
 
-            <div class="metrics three">
+            <div class="stat-grid">
 
                 <div>
+
                     <strong>1,314</strong>
-                    <span>census tracts</span>
+
+                    <span>
+                        census tracts
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>73%</strong>
-                    <span>food-desert recall</span>
+
+                    <span>
+                        food-desert recall
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>0.838</strong>
-                    <span>mean ROC-AUC</span>
+
+                    <span>
+                        mean ROC-AUC
+                    </span>
+
                 </div>
 
             </div>
 
 
-            <div class="tags">
+            <div class="tech-list">
+
                 <span>Python</span>
                 <span>GeoPandas</span>
                 <span>scikit-learn</span>
-                <span>D3.js</span>
                 <span>SMOTE</span>
+                <span>D3.js</span>
+                <span>Census API</span>
+
             </div>
 
         </div>
@@ -436,23 +758,27 @@
     </article>
 
 
-    <!-- PROJECT 4 -->
+    <!-- ================= PROJECT 04 ================= -->
 
-    <article class="project">
+    <article
+        class="project project-split"
+        id="project-fairlend"
+    >
 
         <div class="project-number">
             04
         </div>
 
-        <div class="project-content">
 
-            <div class="project-top">
+        <div class="project-body">
+
+            <div class="project-heading">
 
                 <div>
 
-                    <p class="project-category">
-                        RESPONSIBLE AI · DATA MINING
-                    </p>
+                    <div class="project-type">
+                        RESPONSIBLE AI · DATA MINING · RESEARCH
+                    </div>
 
                     <h3>
                         FairLend
@@ -460,8 +786,12 @@
 
                 </div>
 
-                <a href="#" class="project-link">
-                    Paper ↗
+
+                <a
+                    href="#research"
+                    class="project-external"
+                >
+                    Research ↗
                 </a>
 
             </div>
@@ -469,37 +799,56 @@
 
             <p class="project-description">
                 Audited mortgage-lending patterns across 103,481 HMDA
-                applications using association-rule mining and fairness-aware
-                analysis.
+                2023 applications using association-rule mining and
+                fairness-aware binning.
             </p>
 
 
-            <div class="metrics three">
+            <div class="stat-grid">
 
                 <div>
+
                     <strong>103K+</strong>
-                    <span>applications</span>
+
+                    <span>
+                        applications
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>2,454</strong>
-                    <span>fair rules</span>
+
+                    <span>
+                        fairness-aware rules
+                    </span>
+
                 </div>
 
+
                 <div>
+
                     <strong>2.81</strong>
-                    <span>highest lift</span>
+
+                    <span>
+                        highest lift
+                    </span>
+
                 </div>
 
             </div>
 
 
-            <div class="tags">
+            <div class="tech-list">
+
                 <span>FP-Growth</span>
                 <span>mlxtend</span>
-                <span>Fairness</span>
-                <span>HMDA</span>
                 <span>Python</span>
+                <span>HMDA</span>
+                <span>Parquet</span>
+
             </div>
 
         </div>
@@ -509,24 +858,27 @@
 </section>
 
 
-<!-- ================= RESEARCH ================= -->
+<!-- =====================================================
+     RESEARCH
+===================================================== -->
 
 <section id="research" class="section research">
 
-    <div class="section-label">
+    <div class="section-index">
         03 / RESEARCH
     </div>
 
-    <div class="section-heading">
+
+    <div class="section-title-row">
 
         <h2>
-            From experiments<br>
-            to research.
+            Research<br>
+            that ships.
         </h2>
 
         <p>
-            Research work spanning responsible AI, recommendation systems,
-            and intelligent computer vision applications.
+            Work spanning responsible AI, recommendation systems,
+            and intelligent applications.
         </p>
 
     </div>
@@ -534,50 +886,94 @@
 
     <div class="research-list">
 
-        <a href="#" class="research-item">
+
+        <a
+            href="#"
+            class="research-item"
+        >
 
             <div>
-                <span>2026 · arXiv</span>
+
+                <span>
+                    2026 · arXiv
+                </span>
 
                 <h3>
                     Auditing Discriminatory Patterns in Mortgage Lending
                     Through Association Rules and Fair Binning
                 </h3>
+
+                <p>
+                    A fairness audit of mortgage lending using
+                    association-rule mining and fairness-aware analysis.
+                </p>
+
             </div>
 
-            <span class="arrow">↗</span>
+            <strong>
+                ↗
+            </strong>
 
         </a>
 
 
-        <a href="#" class="research-item">
+        <a
+            href="#"
+            class="research-item"
+        >
 
             <div>
-                <span>2024 · Library Progress International</span>
+
+                <span>
+                    2024 · Library Progress International
+                </span>
 
                 <h3>
+                    Revolutionizing Culinary Experiences:
                     AI-Driven Ingredient Recognition and Personalized
                     Recipe Recommendation System
                 </h3>
+
+                <p>
+                    Computer vision and recommendation methods
+                    for personalized culinary experiences.
+                </p>
+
             </div>
 
-            <span class="arrow">↗</span>
+            <strong>
+                ↗
+            </strong>
 
         </a>
 
 
-        <a href="#" class="research-item">
+        <a
+            href="#"
+            class="research-item"
+        >
 
             <div>
-                <span>2024 · Journal of Electrical Systems</span>
+
+                <span>
+                    2024 · Journal of Electrical Systems
+                </span>
 
                 <h3>
-                    Smart Wardrobe: Personalized Clothing Recommendation
-                    Using Nearest Neighbor Models
+                    Smart Wardrobe: A Comprehensive Approach to
+                    Personalized Clothing Recommendation
                 </h3>
+
+                <p>
+                    Nearest-neighbor based personalized clothing
+                    recommendation.
+                </p>
+
             </div>
 
-            <span class="arrow">↗</span>
+            <strong>
+                ↗
+            </strong>
 
         </a>
 
@@ -586,49 +982,78 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- =====================================================
+     ABOUT
+===================================================== -->
 
 <section id="about" class="section about">
 
-    <div class="section-label">
+    <div class="section-index">
         04 / ABOUT
     </div>
+
 
     <div class="about-grid">
 
         <div>
 
             <h2>
-                Building at the intersection of
-                <span>research and engineering.</span>
+                Research mindset.
+                <span>Engineering discipline.</span>
             </h2>
 
         </div>
 
 
-        <div class="about-text">
+        <div class="about-content">
 
             <p>
-                I'm currently pursuing an MS in Computer Science at the
-                University of Illinois Chicago, with a focus on machine
-                learning, language processing, computer vision, and data.
-            </p>
-
-            <p>
-                I enjoy taking an ML problem from an experiment on a
-                notebook to something reproducible, testable and usable.
+                I'm currently pursuing an MS in Computer Science
+                at the University of Illinois Chicago after completing
+                my B.Tech in Artificial Intelligence and Machine Learning.
             </p>
 
 
-            <div class="education">
+            <p>
+                My work sits at the intersection of language models,
+                computer vision, data science and systems engineering.
+            </p>
 
-                <strong>
-                    University of Illinois Chicago
-                </strong>
 
-                <span>
-                    MS Computer Science · 2025–2027
-                </span>
+            <div class="education-card">
+
+                <div>
+
+                    <small>
+                        CURRENT
+                    </small>
+
+                    <strong>
+                        University of Illinois Chicago
+                    </strong>
+
+                    <span>
+                        MS Computer Science · 2025–2027
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <small>
+                        PREVIOUS
+                    </small>
+
+                    <strong>
+                        D. J. Sanghvi College of Engineering
+                    </strong>
+
+                    <span>
+                        B.Tech AI & ML · 2021–2025
+                    </span>
+
+                </div>
 
             </div>
 
@@ -639,44 +1064,95 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
+<!-- =====================================================
+     TOOLKIT
+===================================================== -->
 
-<section class="section skills">
+<section class="section toolkit">
 
-    <div class="section-label">
+    <div class="section-index">
         05 / TOOLKIT
     </div>
 
-    <div class="skills-grid">
 
-        <div>
-            <h3>Languages</h3>
-            <p>Python · Java · SQL · C/C++ · JavaScript</p>
+    <div class="toolkit-grid">
+
+
+        <div class="tool-group">
+
+            <small>
+                LANGUAGES
+            </small>
+
+            <h3>
+                Python · Java · SQL · C/C++ · JavaScript
+            </h3>
+
         </div>
 
-        <div>
-            <h3>Machine Learning</h3>
-            <p>PyTorch · Hugging Face · scikit-learn · TensorFlow</p>
+
+        <div class="tool-group">
+
+            <small>
+                MACHINE LEARNING
+            </small>
+
+            <h3>
+                PyTorch · Hugging Face · scikit-learn · TensorFlow
+            </h3>
+
         </div>
 
-        <div>
-            <h3>Computer Vision</h3>
-            <p>OpenCV · COLMAP · 3D Gaussian Splatting</p>
+
+        <div class="tool-group">
+
+            <small>
+                COMPUTER VISION
+            </small>
+
+            <h3>
+                OpenCV · COLMAP · 3D Gaussian Splatting · Mip-Splatting
+            </h3>
+
         </div>
 
-        <div>
-            <h3>Backend & Testing</h3>
-            <p>FastAPI · REST APIs · Pydantic · pytest · Docker</p>
+
+        <div class="tool-group">
+
+            <small>
+                ML ENGINEERING
+            </small>
+
+            <h3>
+                FastAPI · Pydantic · pytest · Docker · GitHub Actions
+            </h3>
+
         </div>
 
-        <div>
-            <h3>Data</h3>
-            <p>PySpark · NumPy · Pandas · GeoPandas · D3.js</p>
+
+        <div class="tool-group">
+
+            <small>
+                DATA
+            </small>
+
+            <h3>
+                PySpark · Pandas · NumPy · GeoPandas · D3.js
+            </h3>
+
         </div>
 
-        <div>
-            <h3>Developer Tools</h3>
-            <p>Git · GitHub Actions · Linux · W&B · Hugging Face Spaces</p>
+
+        <div class="tool-group">
+
+            <small>
+                INFRASTRUCTURE
+            </small>
+
+            <h3>
+                Git · Linux/Bash · W&B · Hugging Face Spaces · ffmpeg
+            </h3>
+
         </div>
 
     </div>
@@ -684,43 +1160,68 @@
 </section>
 
 
-<!-- ================= CONTACT ================= -->
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
 <section id="contact" class="contact">
 
-    <p class="eyebrow">
-        LET'S BUILD SOMETHING
-    </p>
+    <div class="contact-inner">
 
-    <h2>
-        Have an interesting<br>
-        ML problem?
-    </h2>
+        <div class="eyebrow">
+            06 / CONTACT
+        </div>
 
-    <a
-        href="mailto:dhwanichande29@gmail.com"
-        class="contact-email"
-    >
-        dhwanichande29@gmail.com →
-    </a>
+        <h2>
+            Let's build something
+            <span>interesting.</span>
+        </h2>
 
 
-    <div class="socials">
-
-        <a href="https://github.com/dhwani-chande" target="_blank">
-            GitHub
+        <a
+            href="mailto:dhwanichande29@gmail.com"
+            class="email-link"
+        >
+            dhwanichande29@gmail.com
+            <span>↗</span>
         </a>
 
-        <a href="#" target="_blank">
-            LinkedIn
-        </a>
+
+        <div class="contact-links">
+
+            <a
+                href="https://github.com/Dhwani-Chande"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="Dhwani_Auvnish_Chande_Resume.pdf"
+                target="_blank"
+            >
+                Resume
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
+</main>
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
