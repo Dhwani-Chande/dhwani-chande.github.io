@@ -940,6 +940,19 @@ button {
 }
 
 
+.project-links {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+}
+
+
 .project-links a,
 .project-external {
 
@@ -1705,6 +1718,104 @@ footer {
 
 
 /* =====================================================
+   COMPARISON SLIDER
+===================================================== */
+
+.compare-slider {
+
+    margin-top: 30px;
+
+}
+
+
+.compare-images {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+}
+
+
+.compare-img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+.compare-after {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    clip-path: inset(0 50% 0 0);
+
+}
+
+
+.compare-range {
+
+    width: 100%;
+
+    margin-top: 14px;
+
+    accent-color: var(--text);
+
+}
+
+
+.compare-labels {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+    color: var(--muted);
+
+}
+
+
+.pipeline-callout {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--text);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 11px;
+
+    letter-spacing: .3px;
+
+}
+
+
+/* =====================================================
    NODE HIGHLIGHT
 ===================================================== */
 
@@ -2057,6 +2168,24 @@ footer {
     .contact h2 {
 
         font-size: 48px;
+
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
 
     }
 
